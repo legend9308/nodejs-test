@@ -28,6 +28,7 @@ exports.dologin=function(req,res,next){
 		// console.log(result);
 		if (result[0]) {
 			req.session.name=result[0].NAME;
+			// 可以用app.locals
 			blog_model.getAll(function(result){
 				res.render('index_logined',{
 				'name':req.session.name,
