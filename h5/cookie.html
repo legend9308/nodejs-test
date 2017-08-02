@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function setCookie(key,value,sec){
+			var str = key+'='+value;
+			if (sec) {
+				var now=new Date();
+				now.setSeconds(now.getSeconds()+sec);
+				str += '; expires='+now;
+				console.log(str);
+			}
+			document.cookie = str;
+		}
+		setCookie('qq123','leg',20);
+	</script>
+</body>
+</html>

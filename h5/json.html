@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var obj={xx:'abc',yy:'zxc'};
+	function clone(obj){
+		var newobj={};
+		for(p in obj){
+			if (obj[p] instanceof Object) {
+				newobj[p]=clone(obj[p]);
+			}else{
+				newobj[p]=obj[p];
+			}
+		}
+		return newobj;
+	}
+
+	var obj1=clone(obj);
+	obj.yy='123';
+	console.log(obj1);
+</script>
